@@ -49,15 +49,28 @@
     display: flex;
     padding: 60px 20px;
     justify-content: space-between;
+    overflow-x: hidden;
     }
     .left{
-      width: 40%;
+      flex: 0.75;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
-    /* .right{
-      width: 40%;
-    } */
+    .right{
+      flex: 1.25;
+      object-fit: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      object-fit: cover;
+    }
+    .right img{
+        width: 100%;
+    }
   .hero h1 {
-    font-size: 60px;
+    font-size: xx-large;
     margin-bottom: 20px;
     /* text-align: left; */
   }
@@ -113,17 +126,28 @@
  }
   .card {
     display: flex;
+    flex-direction: row;
     flex-wrap: nowrap;
     padding: 20px;
     height: 200px;
-    width: 600px;
+    width: 500px;
     border: 1px solid black;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     transition: transform 0.2s ease;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card-left{
+    width: 60%;
+
+
+  }
+  .card-right{
+    width: 40%;
   }
   .card-img{
-    width: 30%;
+    width: 80%;
   }
   .flex{
     display: flex;
@@ -273,17 +297,64 @@
     color: #000;
     margin-left: 10px;
   }
-  .menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-  }
-  .menu-toggle div {
-    width: 25px;
-    height: 3px;
-    background: #000;
-  }
-  @media (max-width: 768px) {
-    
+ 
+ 
+  @media screen and  (max-width: 786px) {
+    header{
+        flex-direction: column;
+    }
+    .nav-bar{
+        flex-direction: column;
+    }
+    .hero{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .brands{
+        gap: 10PX;
+        flex-direction: row;
+    }
+    .cards-section{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .card{
+        width: 100%;
+        height: 150px;
+    }
+    .contact-heading{
+        flex-direction: column;
+    }
+    .contact-heading p{
+        text-align: center;
+    }
+    .form-area{
+        margin: auto;
+    }
+    .form-img{
+        display: none;
+    }
+    footer{
+        flex-direction: column;
+    }
+    .nav-bar-footer{
+        flex-direction: column;
+    }
+    .contact-div{
+        flex-direction: column;
+    }
+    .second{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-menu{
+        flex-direction: column;
+    }
+    .contact-div{
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+    }
   }
