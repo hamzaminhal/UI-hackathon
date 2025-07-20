@@ -45,6 +45,10 @@
     cursor: pointer;
     font-weight: 600;
   }
+  .nav-icon{
+    display: none;
+  }
+  
   .hero {
     display: flex;
     padding: 60px 20px;
@@ -300,11 +304,12 @@
  
  
   @media screen and  (max-width: 786px) {
-    header{
-        flex-direction: column;
-    }
+    
     .nav-bar{
-        flex-direction: column;
+        display: none;
+    }
+    .nav-icon{
+      display: block;
     }
     .hero{
         flex-direction: column;
@@ -344,17 +349,21 @@
     .contact-div{
         flex-direction: column;
     }
+    .icons{
+      margin: 20px;
+    }
+    .first{
+      align-items: center;
+    }
     .second{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
+        display: none;
+        
     }
     .footer-menu{
         flex-direction: column;
     }
     .contact-div{
         flex-direction: column;
-        /* justify-content: center; */
         align-items: center;
     }
   }
